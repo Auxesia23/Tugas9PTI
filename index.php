@@ -44,3 +44,18 @@ onclick="hapus('.$row["id_produk"]. ', '.$row["nama_produk"].' )">Hapus</button>
         echo "Belum ada produk";
     }
 </table>
+
+<br>
+
+<button><a href="tambah.php">Tambah Produk baru</a></button>
+
+</body>
+
+<script>
+    function hapus(id, nama_produk) {
+        if (confirm('Apakah anda yakin ' + nama_produk + ' akan di hapus? ')) {
+            window.location.replace(' <?= getBaseUrl("index.php?hapus=") ?>'+ id);
+        }
+    }
+</script>
+</html>
